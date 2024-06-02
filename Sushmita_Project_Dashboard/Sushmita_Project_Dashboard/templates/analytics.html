@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {{ toastr.include_jquery() }}
+    {{ toastr.include_toastr_css() }}
+    {{ toastr.message() }}
+</head>
+<body>
+    <p><a href="http://localhost:5002/">Back to Homepage</a></p>
+    <h1>Analytics</h1>
+
+    <h3>Max Attendance = {{max_att}}, Min Attendance = {{min_att}}, Avg. Attendance = {{mean_att}}</h3>
+    <img id="analytics-image-gender" src="/student_distribution_gender.png" alt="Student Gender Distribution">
+    <img id="analytics-image-courses" src="/student_distribution_courses.png" alt="">
+    <img id="analytics-image-courses-attendance" src="/student_distribution_days_per_course.png" alt="">
+    {{ toastr.include_toastr_js() }}
+</body>
+</html>
